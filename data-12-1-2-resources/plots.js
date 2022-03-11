@@ -34,8 +34,22 @@ var trace = {
     values: [22.7, 17.1, 9.9, 8.7, 7.2, 6.1, 6.0, 4.6],
     type: 'pie'
    };
-   var data = [trace];
-   var layout = {
+
+var data = [trace];
+var layout = {
     title: "'Pie' Chart",
-   };
-   Plotly.newPlot("plotArea", data, layout);
+};
+
+Plotly.newPlot("plotArea", data, layout);
+
+   // Filter the results to include only animals whose species name starts with the letter "s."
+var words = ['seal', 'dog', 'scorpion', 'orangutan', 'salamander'];
+
+var sWords = words.filter(word => word[0] == 's');
+console.log(sWords);
+
+var familyAge = [3,2,39,37,9];
+var sortedAge = familyAge.sort((anElement,anotherElement) => anElement -
+anotherElement);
+
+var sliceWords = words.slice(0,3);
