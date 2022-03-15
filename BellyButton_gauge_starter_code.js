@@ -9,7 +9,7 @@ function buildCharts(sample) {
     // Create a variable that filters the samples for the object with the desired sample number.
 
     // 1. Create a variable that filters the metadata array for the object with the desired sample number.
-
+    var chartMetadata = data.metadata
     // Create a variable that holds the first sample in the array.
   
 
