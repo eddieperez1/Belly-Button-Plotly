@@ -91,5 +91,39 @@ function buildCharts(sample) {
   // 10. Use Plotly to plot the data with the layout. 
 
   Plotly.newPlot("bar",barData,barLayout);
+
+  // Bubble chart
+  // 1. Create the trace for the bubble chart.
+  var bubbleData = [
+    {
+      x: chartOtuIds,
+      y: chartSampleValues,
+      hovertemplate: '<b>OTU ID</b>: %{x}' +
+
+                        '<br><b>Sample Value</b>: %{y}<br>' +
+
+                        '<b>OTU Labels</b>:  %{text}',
+      text: chartOtuLabels,
+      mode: 'markers',
+      marker:
+      {
+        color: chartOtuIds,
+        size: chartSampleValues,
+        colorscale: 'RdBu'
+      }
+    }
+  ];
+
+  // 2. Create the layout for the bubble chart.
+  var bubbleLayout = {
+    title: 'Bateria Culture per Sample',
+    xaxis: {
+      title: 'OTU ID'
+    },
+    hovermode: 'closest'
+  };
+
+  // 3. Use Plotly to plot the data with the layout.
+  Plotly.newPlot('bubble',bubbleData,bubbleLayout); 
   });
 }
