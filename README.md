@@ -9,8 +9,12 @@ Design and create a dashboard that will show bateria culture samples found in th
 
 ## Overview of Website
 
+![website default](/screenshots/website%20default.PNG)
 
+The website has 3 charts with a dropdown menu to select a volunteer's belly button bateria. A small description of the website, bar chart, bubble chart and gauge chart are displayed.
 
 ## Usage
 
+![website usage](/screenshots/website%20usage.PNG)
 
+Use the dropdown menu to choose a volunteer id then the charts will change according to that volunteer id's data.
